@@ -4,4 +4,4 @@ python:
   - "3.6"      # current default Python on Travis CI
 # command to run tests
 script:
-  - python source/driver.py travisTest
+  - python source/driver.py
