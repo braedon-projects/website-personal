@@ -17,6 +17,7 @@ def index():
 @app.route('/getbmi', methods=['POST', 'GET'])
 def getbmi():
     if request.method == 'POST':
+        print("U")
         if request.form['submit'] == 'submit':
             height = float(request.form['height'])
             weight = float(request.form['weight'])
@@ -34,7 +35,7 @@ def retire():
             sal = float(request.form['salary'])
             pcs = float(request.form['percentsaved'])
             sg = float(request.form['savingsgoal'])
-            message, flag, pflag, sflag, aflag = retirement(age, sal, pcs, sg)
+            message = retirement(age, sal, pcs, sg)
             return render_template('retirement.html', message=message)
     return render_template('retirement.html')
     #retirment page go here

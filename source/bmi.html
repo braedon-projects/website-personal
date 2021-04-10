@@ -10,12 +10,12 @@
     <form action="{{url_for('getbmi')}}" method="POST">
         <h1>Input height in first box, weight in second.</h1>
         <div class="input">
-            <input type="text" name="height">
-            <input type="text" name="weight">
-            <input type="submit" name="submit" value="submit">
+            <input type="text" name="height" id='InputH'>
+            <input type="text" name="weight" id='InputW'>
+            <input type="submit" name="submit" value="submit" id="s">
         </div>
-        <h3 class = "text">        
-            <p>{{message}} {{category}}</p>     
+        <h3 class = "text">
+            <p>{{message}} {{category}}</p>
         </h3>
 
     </form>
