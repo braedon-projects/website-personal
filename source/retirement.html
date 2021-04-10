@@ -7,6 +7,19 @@
     <title>Retirement Page</title>
 </head>
 <body>
-    <h1>this is the retirement page</h1>
+    <form action="{{url_for('retire')}}" method="POST">
+        <h1>Input age, salary, percentage you will save, and savings goal in the following boxes.</h1>
+        <div class="input">
+            <input type="text" name="age" value="22">
+            <input type="text" name="salary" value="50000">
+            <input type="text" name="percentsaved" value="10">
+            <input type="text" name="savingsgoal" value="500000">
+            <input type="submit" name="submit" value="submit">
+        </div>
+        <h3 class = "text">        
+            <p>{{message}}</p>     
+        </h3>
+
+    </form>
 </body>
 </html>
