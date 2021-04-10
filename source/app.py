@@ -20,7 +20,7 @@ def getbmi():
         if request.form['submit'] == 'submit':
             height = float(request.form['height'])
             weight = float(request.form['weight'])
-            cat, out = bmi(weight, height)
+            cat, out, wflag, hflag = bmi(weight, height)
             return render_template('bmi.html', category = cat, message = out)
     return render_template('bmi.html')
     #bmi page go here
@@ -34,7 +34,7 @@ def retire():
             sal = float(request.form['salary'])
             pcs = float(request.form['percentsaved'])
             sg = float(request.form['savingsgoal'])
-            message = retirement(age, sal, pcs, sg)
+            message, flag, pflag, sflag, aflag = retirement(age, sal, pcs, sg)
             return render_template('retirement.html', message=message)
     return render_template('retirement.html')
     #retirment page go here
