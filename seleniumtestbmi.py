@@ -5,13 +5,13 @@ import time
 
 
 def bmi(sweight,sheight):
-    weight= driver.find_element_by_xpath(".//*[@id='InputW']")
+    weight= driver.find_element_by_xpath(".//*[@name='weight']")
     weight.send_keys(sweight)
 
-    heigh= driver.find_element_by_xpath(".//*[@id='InputH']")
+    heigh= driver.find_element_by_xpath(".//*[@name='height']")
     heigh.send_keys(sheight)
 
-    login = driver.find_element_by_xpath(".//*[@id='s']")
+    login = driver.find_element_by_xpath(".//*[@name='submit']")
     login.click()
 
 
