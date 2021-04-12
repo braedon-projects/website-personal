@@ -5,17 +5,14 @@ app = Flask(__name__, template_folder='.')
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
-        if 'getbmi' in request.form:
-            return redirect(url_for('getbmi'))
+        if 'bmi' in request.form:
+            return redirect(url_for('bmipage'))
         if 'retirement' in request.form:
-            return redirect(url_for('retire'))
-        
+            return redirect(url_for('retirementpage'))
     return render_template('index.html')
-    # homepage go here
-    print('home is where the heart is')
 
-@app.route('/getbmi', methods=['POST', 'GET'])
-def getbmi():
+@app.route('/bmipage', methods=['POST', 'GET'])
+def bmipage():
     if request.method == 'POST':
         if request.form['submit'] == 'submit':
             height = float(request.form['height'])
@@ -23,11 +20,9 @@ def getbmi():
             cat, out, wflag, hflag = bmi(weight, height)
             return render_template('bmi.html', category = cat, message = out)
     return render_template('bmi.html')
-    #bmi page go here
-    print('bmi')
 
-@app.route('/retirement', methods=['POST', 'GET'])
-def retire():
+@app.route('/retirementpage', methods=['POST', 'GET'])
+def retirementpage():
     if request.method == 'POST':
         if request.form['submit'] == 'submit':
             age = float(request.form['age'])
@@ -37,8 +32,6 @@ def retire():
             message, flag, pflag, sflag, aflag = retirement(age, sal, pcs, sg)
             return render_template('retirement.html', message=message)
     return render_template('retirement.html')
-    #retirment page go here
-    print('retirement')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=4321)
+    app.run(debug=True, port=5000)
