@@ -70,39 +70,68 @@ def retire(age_input, salary_input, percentsaved_input, savgoal_input,flag,value
 
 if __name__ == '__main__':
     driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
-    driver.get("http://127.0.0.1:4321/getbmi")
+    driver.get("http://127.0.0.1:4321")
 
-
+sub = driver.find_element_by_xpath(".//*[@name='getbmi']")
+sub.click()
 cal=0
 
-cal+=bmi("120","72","For a weight of 120.0lbs and a height of 72.0in your BMI is: 16.27 Underweight")
-#time.sleep(timer)
-cal+=bmi("180","72","For a weight of 180.0lbs and a height of 72.0in your BMI is: 24.41 Normal")
-#time.sleep(timer)
-cal+=bmi("300","72","For a weight of 300.0lbs and a height of 72.0in your BMI is: 40.68 Obese")
-#time.sleep(timer)
-cal+=bmi("215","73","For a weight of 215.0lbs and a height of 73.0in your BMI is: 28.36 Overweight")
+test=bmi("120","72","For a weight of 120.0lbs and a height of 72.0in your BMI is: 16.27 Underweight")
+cal+=test
+if(test==1):
+    file1.write("Failed BMI Underweight test\n") 
+
+test=bmi("180","72","For a weight of 180.0lbs and a height of 72.0in your BMI is: 24.41 Normal")
+cal+=test
+if(test==1):
+    file1.write("Failed BMI Normal test\n") 
+
+test=bmi("300","72","For a weight of 300.0lbs and a height of 72.0in your BMI is: 40.68 Obese")
+cal+=test
+if(test==1):
+    file1.write("Failed BMI Obese test\n")
+
+test=bmi("215","73","For a weight of 215.0lbs and a height of 73.0in your BMI is: 28.36 Overweight")
+cal+=test
+if(test==1):
+    file1.write("Failed BMI Overweight test\n") 
 
 if(cal<1):
     file1.write("All BMI Tests Passed\n")
-else:
-    file1.write(str(cal)+" BMI Tests Failed\n")
 file1.close()
+
+
 
 file1=open("log.txt","a")
 cal=0
-driver.get("http://127.0.0.1:4321/retirement")
+driver.get("http://127.0.0.1:4321/")
+sub = driver.find_element_by_xpath(".//*[@name='retirement']")
+sub.click()
 
-cal+=retire("25", "100000", "0.25", "200000",1," True")
-cal+=retire("25", "100000", "0.9", "2000000",2," True")
-cal+= retire("12", "500", "1", "5000",3, " True")
+test=retire("25", "100000", "0.25", "200000",1," True")
+cal+=test
+if(test==1):
+    file1.write("Failed Retirement test to ensure that the age cap of 100 is met\n")
 
-cal+= retire("32", "45000", "0.6", "1200000",4, " True")
+test=retire("25", "100000", "0.9", "2000000",2," True")
+cal+=test
+if(test==1):
+    file1.write("Failed Retirement test to ensure that the percentage is between [0.0, 1.0]\n")
+    
+test= retire("12", "500", "1", "5000",3, " True")
+cal+=test
+if(test==1):
+    file1.write("Failed Retirement test to ensure that the salary is in the range (0, 500,000]\n")
+
+
+test= retire("32", "45000", "0.6", "1200000",4, " True")
+cal+=test
+if(test==1):
+    file1.write("Failed Retirement test to ensure that all inputs are reasonable based on the defined acceptable ranges\n")
 
 if(cal<1):
-    file1.write("All Retire Tests Passed")
-else:
-    file1.write(str(cal)+" Retire Tests Failed")
+    file1.write("All Retirement Tests Passed")
+
 file1.close()
 
 
