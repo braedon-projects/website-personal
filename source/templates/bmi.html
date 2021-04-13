@@ -13,7 +13,7 @@
         <h1 class="display-4">BMI Calculator</h1>
         <p class="lead">This calculator uses height in inches and weight in pounds to calculate BMI. BMI can act as an indicator of a person's total body fat.</p>
     </div>
-    <div class="container alert alert-dark" role="alert">
+    <div id="result" class="container alert alert-dark" role="alert">
         {{message}} {{category}}
      </div>
     <div class="container">
@@ -36,4 +36,13 @@
         </form> 
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>>
+<script>
+    $(document).ready(function(){
+        $('form').submit(function(e){
+            $('.alert').show();
+            e.preventDefault();
+        });
+    });
+</script>
 </html>

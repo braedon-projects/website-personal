@@ -14,7 +14,7 @@ def index():
 @app.route('/bmipage', methods=['POST', 'GET'])
 def bmipage():
     if request.method == 'POST':
-        if request.form['submit'] == 'submit':
+        if 'submit' in request.form:
             height = float(request.form['height'])
             weight = float(request.form['weight'])
             cat, out, wflag, hflag = bmi(weight, height)
@@ -24,7 +24,7 @@ def bmipage():
 @app.route('/retirementpage', methods=['POST', 'GET'])
 def retirementpage():
     if request.method == 'POST':
-        if request.form['submit'] == 'submit':
+        if 'submit' in request.form:
             age = float(request.form['age'])
             sal = float(request.form['salary'])
             pcs = float(request.form['percentsaved'])
@@ -34,4 +34,4 @@ def retirementpage():
     return render_template('retirement.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=4321)

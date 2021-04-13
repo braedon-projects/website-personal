@@ -3,8 +3,9 @@ body{
 }
 
 .alert{
-    width: 40%;
+    width: 35%;
     text-align: center;
+    display: none;
 }
 
 .card{
@@ -38,4 +39,28 @@ body{
 .btn-light:hover{
     transition: transform 150ms;
     transform: translateY(-5px);
+}
+
+@media (max-width: 950px) {
+    .card{
+        width: 60%;
+    }
+    .title{
+        width: 70%;
+    }
+    .alert{
+        width: 60%;
+    }    
+}
+
+@media (max-width: 775px) {
+    .card{
+        width: 75%;
+    }
+    .title{
+        width: 70%;
+    }
+    .alert{
+        width: 70%;
+    }  
 }
