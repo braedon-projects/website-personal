@@ -13,6 +13,9 @@
         <h1 class="display-4">Retirement Savings Calculator</h1>
         <p class="lead">Based on age, salary, salary percent saved per year, and savings goal, this calculator will let a person know if they will meet their retirement savings goal.</p>
     </div>
+    <div class="container alert alert-dark" role="alert">
+        {{message}}
+     </div>
     <div class="container">
         <form action="{{url_for('retirementpage')}}" method="POST">
             <div class="card">
@@ -42,8 +45,5 @@
             </div>
         </form>
     </div>
-    <h3 class = "text">        
-        <p>{{message}}</p>     
-    </h3>
 </body>
 </html>
