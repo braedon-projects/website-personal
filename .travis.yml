@@ -2,6 +2,8 @@ language: python
 python:
   - "3.6"      # current default Python on Travis CI
 # command to run tests
+install:
+  - pip install -r source/requirements.txt
 script:
   - python source/drivertester.py
   - python source/seleniumtest.py
