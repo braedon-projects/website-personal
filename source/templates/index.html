@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofware QA Assignment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="cover">
+    <div class="container">
+        <h1 class="display-4">BMI/Retirement Calcultor</h1>
+        <p class="lead">Make a selction by clicking one of the buttons below</p>
+    </div>
+    <form method="POST" action="/">
+        <div class="container cover-buttons">
+            <button type="submit" class="btn btn-light" name="bmi">Calculate BMI</button>
+            <button type="submit" class="btn btn-light" name="retirement">Caculate Retirement</button>
+        </div>
+    </form> 
+</body>
+</html>
