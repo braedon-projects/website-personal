@@ -6,6 +6,7 @@ install:
   - pip install -r source/requirements.txt
 script:
   - python source/drivertester.py
+  - python source/main.py
   - python source/seleniumtest.py
   
 after_success: "sbt coveralls"
