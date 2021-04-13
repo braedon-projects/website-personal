@@ -4,3 +4,5 @@ python:
 # command to run tests
 script:
   - python source/drivertester.py
+  
+after_success: "sbt coveralls"
