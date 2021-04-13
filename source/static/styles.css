@@ -2,10 +2,10 @@ body{
     background-color: #333333;
 }
 
-.alert{
-    width: 35%;
-    text-align: center;
-    display: none;
+.result{
+    width: 50%;
+    color: #fff;
+    padding-bottom: 2%;
 }
 
 .card{
@@ -48,7 +48,7 @@ body{
     .title{
         width: 70%;
     }
-    .alert{
+    .result{
         width: 60%;
     }    
 }
@@ -60,7 +60,7 @@ body{
     .title{
         width: 70%;
     }
-    .alert{
+    .result{
         width: 70%;
     }  
 }
