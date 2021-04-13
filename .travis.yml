@@ -4,6 +4,6 @@ python:
 # command to run tests
 script:
   - python source/drivertester.py
-  - python seleniumtest.py
+  - python source/seleniumtest.py
   
 after_success: "sbt coveralls"
