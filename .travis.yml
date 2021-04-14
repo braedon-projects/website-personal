@@ -13,5 +13,6 @@ script:
   - pytest --cov=source/ 
   - pylint source/main.py
   - pylint source/driver.py
+  - pylint source/drivertester.py
 after_success: 
   - coveralls
