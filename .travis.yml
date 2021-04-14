@@ -4,7 +4,11 @@ python:
 # command to run tests
 install:
   - pip install -r source/requirements.txt
+  - pip install pytest
+  - pip install pytest-cov
+  - pip install coveralls
 script:
   - python source/drivertester.py
-  
-after_success: "sbt coveralls"
+  - pytest --cov=source/ 
+after_success: 
+  - coveralls
