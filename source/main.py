@@ -13,25 +13,31 @@ def index():
 
 @app.route('/bmipage', methods=['POST', 'GET'])
 def bmipage():
-    if request.method == 'POST':
-        if 'submit' in request.form:
-            height = float(request.form['height'])
-            weight = float(request.form['weight'])
-            cat, out, wflag, hflag = bmi(weight, height)
-            return render_template('bmi.html', category = cat, message = out)
-    return render_template('bmi.html')
+    try: 
+        if request.method == 'POST':
+            if 'submit' in request.form:
+                height = float(request.form['height'])
+                weight = float(request.form['weight'])
+                cat, out, wflag, hflag = bmi(weight, height)
+                return render_template('bmi.html', category = cat, message = out)
+        return render_template('bmi.html')
+    except:
+        return render_template('bmi.html', error="An error occurred. Please try again.")
 
 @app.route('/retirementpage', methods=['POST', 'GET'])
 def retirementpage():
-    if request.method == 'POST':
-        if 'submit' in request.form:
-            age = float(request.form['age'])
-            sal = float(request.form['salary'])
-            pcs = float(request.form['percentsaved'])
-            sg = float(request.form['savingsgoal'])
-            message, flag, pflag, sflag, aflag = retirement(age, sal, pcs, sg)
-            return render_template('retirement.html', message=message)
-    return render_template('retirement.html')
+    try:
+        if request.method == 'POST':
+            if 'submit' in request.form:
+                age = float(request.form['age'])
+                sal = float(request.form['salary'])
+                pcs = float(request.form['percentsaved'])
+                sg = float(request.form['savingsgoal'])
+                message, flag, pflag, sflag, aflag = retirement(age, sal, pcs, sg)
+                return render_template('retirement.html', message=message)
+        return render_template('retirement.html')
+    except:
+        return render_template('retirement.html', error="An error occurred. Please try again.")
 
 if __name__ == '__main__':
     app.run(debug=True, port=4321)
