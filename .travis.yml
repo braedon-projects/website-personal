@@ -9,10 +9,9 @@ install:
   - pip install coveralls
   - pip install pylint
 script:
-  - python source/drivertester.py
+  - python tests/drivertester.py
   - pylint source/main.py
   - pylint source/driver.py
   - pylint source/drivertester.py
-  - pytest coverage run-m unittest discover
 after_success: 
   - coveralls
