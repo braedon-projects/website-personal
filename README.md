@@ -1,16 +1,27 @@
-# SoftwareQA-Assignment02
-Repository that contains all source code for assignment 2.
+# SoftwareQA-Assignment3,4
+Repository that contains all source code for assignment 3,4
 
-Assumptions: Operating system is Windows 10, the files are stored on the user desktop.
+Assumptions: Operating system is Windows 10, the user is using git bash.
 
-Begin by downloading Python 3.6x or newer by opening cmd and writing ‘python’, if you already have Python installed, skip this step.
+Setup and execution instructions:
+Step 1: In git bash, clone our repo with the following command and ssh link: 
 
-Then, download the cmdapp.py and test_cmdapp.py files from my GitHub Directory linked here: https://github.com/bkimball98/SoftwareQA-Assignment02. 
+      git clone git@github.com:bkimball98/softwareqa.git
 
-Open cmdapp.py with a text editor or IDE and delete the ‘#’ character before the call to main() at the bottom of the file. Save cmdapp.py and close it.
+Step 2: Navigate into the source folder of the project and set up a virtual environment 
 
-Move the two Python files into your desktop folder, then open cmd by typing cmd into the Windows ‘search’ bar and pressing enter. 
+      https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments
 
-Use the command ‘cd Desktop’ to navigate to the desktop where the Python files reside. 
+Step 3: Start the virtual environment and install the the required packages in the virtual environment with the following command:
 
-Then, use the command ‘python cmdapp.py’ to run the cmdapp. To run the test code, write ‘python test_cmdapp.py’.  It will bring up the cmdapp.py interface first, so you must use the third option (enter ‘3’) to skip it. Then the tests will run. 
+	    python -m pip install -r requirements.txt
+
+Step 4: Start the application by running the file named “main.py”
+  
+      python main.py
+      
+Step 5: Go to the link provided by the code in your web browser. We recommend chrome.
+
+      If you wish to see the app on the live website, follow this link: https://softwareqa.ue.r.appspot.com/ 
+
+
