@@ -3,7 +3,7 @@ from webdriver_manager.chrome import ChromeDriverManager #must pip install webdr
 from selenium.webdriver.common.keys import Keys
 import time
 
-path="http://127.0.0.1:4321/"
+path="https://softwareqa.ue.r.appspot.com/"
 
 file1=open("log.txt","w")
 
