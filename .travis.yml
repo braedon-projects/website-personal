@@ -13,7 +13,6 @@ script:
   - pylint source/main.py
   - pylint source/driver.py
   - pylint source/drivertester.py
-  - pytest --cov=source/
-  - pytest coverage html
+  - pytest coverage run-m unittest discover
 after_success: 
   - coveralls
