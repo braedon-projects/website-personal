@@ -8,7 +8,7 @@ Step 1: In git bash, clone our repo with the following command and ssh link: git
 
 Step 2: cd into the source folder by entering: cd softwareqa/source
 
-Step 3: To run the webapp locally (i.e., on our staging server provided by Flask) cd into the repository on your cmd: "cd wherever git bash puts you/source"
+Step 3: To run the webapp locally (i.e., on our staging server provided by Flask) cd into the repository on your cmd: "cd wherever git bash puts you/softwareqa/source"
 
 Step 4: Install the required libraries into either your root or a virtual environment (you will have to set up the venv yourself) by typing 'pip install -r requirements.txt'
 
