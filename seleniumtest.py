@@ -7,7 +7,7 @@ path="http://127.0.0.1:4321/"
 
 file1=open("log.txt","w")
 
-def bmi(sweight,sheight,output):
+def bmi(sweight,sheight,value,cat):
     weight= driver.find_element_by_xpath(".//*[@name='weight']")
     weight.send_keys(sweight)
 
@@ -19,8 +19,7 @@ def bmi(sweight,sheight,output):
 
     message=driver.find_element_by_xpath(".//*[@class='container text-center result']").text
     
-    if(message == output):
-        
+    if value and cat in message:
         return 0, message
     
     return 1 , message
@@ -42,7 +41,7 @@ def retire(age_input, salary_input, percentsaved_input, savgoal_input,expected):
     sub.click()
 
     message=driver.find_element_by_xpath(".//*[@class='container text-center result']").text
-
+    
     if(expected!=message):
         return 1, message
     return 0, message
@@ -57,24 +56,30 @@ sub.click()
 cal=0
 
 # Underweight
-expected="For a weight of 120.0lbs and a height of 72.0in your BMI is: 16.27"
-test=bmi("120","72",expected)
+expected="16.27 Underweight"
+value, cat=expected.split(" ")
+test=bmi("120","72",value,cat)
 cal+=test[0]
 if(test[0]==1):
     file1.write("Failed BMI Underweight test Expected: "+str(expected)+" Received: "+str(test[1])+"\n") 
 #underWeight
-    
-test=bmi("180","72","For a weight of 180.0lbs and a height of 72.0in your BMI is: 24.41")
+expected="24.41 Normal"
+value, cat=expected.split(" ")
+test=bmi("180","72",value,cat)
 cal+=test[0]
 if(test[0]==1):
     file1.write("Failed BMI Normal test Expected: "+str(expected)+" Received: "+str(test[1])+"\n") 
 
-test=bmi("300","72","For a weight of 300.0lbs and a height of 72.0in your BMI is: 40.68")
+expected="40.68 Obese"
+value, cat=expected.split(" ")
+test=bmi("300","72",value,cat)
 cal+=test[0]
 if(test[0]==1):
     file1.write("Failed BMI Obese test Expected: "+str(expected)+" Received: "+str(test[1])+"\n")
 
-test=bmi("215","73","For a weight of 215.0lbs and a height of 73.0in your BMI is: 28.36")
+expected="28.36 Overweight"
+value, cat=expected.split(" ")
+test=bmi("215","73",value,cat)
 cal+=test[0]
 if(test[0]==1):
     file1.write("Failed BMI Overweight test Expected: "+str(expected)+" Received: "+str(test[1])+"\n") 
