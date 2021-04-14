@@ -1,16 +1,16 @@
 # SoftwareQA-Assignment02
-Repository that contains all source code for assignment 2.
+Repository that contains all source code for assignment 3,4
 
-Assumptions: Operating system is Windows 10, the files are stored on the user desktop.
+Assumptions: Operating system is Windows 10, the user is using git bash.
 
-Begin by downloading Python 3.6x or newer by opening cmd and writing ‘python’, if you already have Python installed, skip this step.
+Setup and execution instructions:
+Step 1: In git bash, clone our repo with the following command and ssh link: git clone git@github.com:bkimball98/softwareqa.git
+Step 2: cd into the source folder by entering: cd softwareqa/source
+Step 3: To run the webapp locally (i.e., on our staging server provided by Flask) cd into the repository on your cmd: "cd wherever git bash puts you/source"
+Step 4: Install the required libraries into either your root or a virtual environment (you will have to set up the venv yourself) by typing 'pip install -r requirements.txt'
+Step 5: Finally, from softwareqa/source, type python main.py
+Step 6: Go to the link provided by the code in your web browser. We recommend chrome. 
 
-Then, download the cmdapp.py and test_cmdapp.py files from my GitHub Directory linked here: https://github.com/bkimball98/SoftwareQA-Assignment02. 
+If you wish to see the app on the live website, follow this link: https://softwareqa.ue.r.appspot.com/ 
 
-Open cmdapp.py with a text editor or IDE and delete the ‘#’ character before the call to main() at the bottom of the file. Save cmdapp.py and close it.
 
-Move the two Python files into your desktop folder, then open cmd by typing cmd into the Windows ‘search’ bar and pressing enter. 
-
-Use the command ‘cd Desktop’ to navigate to the desktop where the Python files reside. 
-
-Then, use the command ‘python cmdapp.py’ to run the cmdapp. To run the test code, write ‘python test_cmdapp.py’.  It will bring up the cmdapp.py interface first, so you must use the third option (enter ‘3’) to skip it. Then the tests will run. 
