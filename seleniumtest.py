@@ -7,7 +7,7 @@ import time
 #path="https://softwareqa.ue.r.appspot.com/"
 
 #use for local testing
-path="https://127.0.0.1:4321/"
+path="http://127.0.0.1:4321/"
 
 file1=open("log.txt","w")
 
