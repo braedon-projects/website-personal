@@ -4,16 +4,13 @@ python:
 # command to run tests
 install:
   - pip install -r source/requirements.txt
-  - pip install pytest
-  - pip install pytest-cov
   - pip install coveralls
-  - pip install pylint
   - pip install coverage
+  - pip install --upgrade pyflakes
 script:
-  - python source/drivertester.py
-  - pylint source/main.py
-  - pylint source/driver.py
-  - pylint source/drivertester.py
+  - pyflakes source/main.py
+  - pyflakes source/driver.py
+  - pyflakes source/drivertester.py
   - coverage run source/drivertester.py
 after_success: 
   - coveralls
