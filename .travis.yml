@@ -14,6 +14,6 @@ script:
   - pylint source/main.py
   - pylint source/driver.py
   - pylint source/drivertester.py
-  - coverage run --source cookiecutter drivertester.py test
+  - coverage run --source cookiecutter source/drivertester.py test
 after_success: 
   - coveralls
