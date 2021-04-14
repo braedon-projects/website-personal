@@ -10,10 +10,10 @@ install:
   - pip install pylint
 script:
   - python source/drivertester.py
-  - pytest --cov=source/
-  - pytest coverage html
   - pylint source/main.py
   - pylint source/driver.py
   - pylint source/drivertester.py
+  - pytest --cov=source/
+  - pytest coverage html
 after_success: 
   - coveralls
