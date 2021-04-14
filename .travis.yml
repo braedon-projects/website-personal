@@ -7,8 +7,11 @@ install:
   - pip install pytest
   - pip install pytest-cov
   - pip install coveralls
+  - pip install pylint
 script:
   - python source/drivertester.py
   - pytest --cov=source/ 
+  - pylint source/main.py
+  - pylint source/driver.py
 after_success: 
   - coveralls
