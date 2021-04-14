@@ -53,37 +53,3 @@ def retirement(age, salary, percentsaved, savgoal):
 	message = ("Age until savings goal is met: " + str(goalage))
 	return message, flag, pflag, sflag, aflag
 
-def main():
-
-	print("Welcome to the application! Options below: \n")
-	x = 0
-#	br = BMI_Retirement()
-	while x == 0:
-
-		print("1: Calculate BMI \n2: Calculate Retirement\n3: Exit the program")
-		var = input()
-
-		if var == '1':
-			w = float(input("Enter weight in pounds: "))
-			h = float(input("Enter height in inches: "))
-
-#			br.bmi(w, h)
-
-		elif var == '2':
-			a = float(input("Enter age (between 0 and 100): "))
-			s = float(
-				input("Enter yearly salary between 0 and 500,000 in $usd: "))
-			ps = float(input("Enter percentage saved (between 0.0 and 1.0): "))
-			gs = float(input("Enter savings goal <2,000,000: "))
-#			br.retirement(a, s, ps, gs)
-
-		elif var == '3':
-			break
-
-		else:
-			print("Please input a valid option, either 1 or 2.\n")
-
-	return
-
-
-	# main()
