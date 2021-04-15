@@ -20,7 +20,7 @@
 	```
 	python main.py
 	```
-1. Go to the link provided by the code in your web browser. We recommend [Chrome](https://www.google.com/chrome/).
+1. The project should now be accessible through your broswer at http://127.0.0.1:4321/. We recommend [Chrome](https://www.google.com/chrome/).
 
       If you wish to see the app on the live website, follow this link: https://softwareqa.ue.r.appspot.com/ 
 
