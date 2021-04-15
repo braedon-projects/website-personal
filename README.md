@@ -14,7 +14,7 @@ Step 2: Navigate into the source folder of the project and set up a virtual envi
 
 Step 3: Start the virtual environment and install the the required packages in the virtual environment with the following command:
 
-	    python -m pip install -r requirements.txt
+	python -m pip install -r requirements.txt
 
 Step 4: Start the application by running the file named “main.py”
   
