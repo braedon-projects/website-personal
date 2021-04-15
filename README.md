@@ -22,6 +22,6 @@
 	```
 1. The project should now be accessible through your broswer at http://127.0.0.1:4321/. We recommend [Chrome](https://www.google.com/chrome/).
 
-      If you wish to see the app on the live website, follow this link: https://softwareqa.ue.r.appspot.com/ 
+*If you wish to see the app on the live website, follow this link: https://softwareqa.ue.r.appspot.com/*
 
 
