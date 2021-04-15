@@ -8,10 +8,8 @@
 	```
 	git clone git@github.com:bkimball98/softwareqa.git
 	```
-1. Navigate into the source folder of the project and set up a [virtual environment](https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments): 
-	```
-	https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments
-	```
+1. Navigate into the source folder of the project and set up a [virtual environment](https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments)
+
 1. Start the virtual environment and install the the required packages in the virtual environment with the following command:
 	```
 	python -m pip install -r requirements.txt
