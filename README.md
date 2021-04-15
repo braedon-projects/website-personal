@@ -1,4 +1,4 @@
-# SoftwareQA-Assignment 3, 4
+# Software Quality and Assurance Assignment 3, 4
 
 *Assumptions: Operating system is Windows 10, the user is using [Git](https://git-scm.com/downloads) bash.*
 
