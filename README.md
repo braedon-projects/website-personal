@@ -1,5 +1,4 @@
 # SoftwareQA-Assignment3,4
-## Repository that contains all source code for assignment 3,4
 
 *Assumptions: Operating system is Windows 10, the user is using [Git](https://git-scm.com/downloads) bash.*
 
