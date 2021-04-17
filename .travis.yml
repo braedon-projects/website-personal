@@ -1,16 +1,16 @@
-language: python
-python:
-  - "3.6"      # current default Python on Travis CI
+#language: python
+#python:
+#  - "3.6"      # current default Python on Travis CI
 # command to run tests
-install:
-  - pip install -r source/requirements.txt
-  - pip install coveralls
-  - pip install coverage
-  - pip install --upgrade pyflakes
-script:
-  - pyflakes source/main.py
-  - pyflakes source/driver.py
-  - pyflakes source/drivertester.py
-  - coverage run source/drivertester.py
-after_success: 
-  - coveralls
+#install:
+#  - pip install -r source/requirements.txt
+#  - pip install coveralls
+#  - pip install coverage
+#  - pip install --upgrade pyflakes
+#script:
+#  - pyflakes source/main.py
+#  - pyflakes source/driver.py
+#  - pyflakes source/drivertester.py
+#  - coverage run source/drivertester.py
+#after_success: 
+#  - coveralls
