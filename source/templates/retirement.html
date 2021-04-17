@@ -14,38 +14,6 @@
             <a class="navbar-brand" href="{{url_for('index')}}">Home Page</a>
         </nav>
     </div>
-    <div class="container title text-center">
-        <h1 class="display-3">Retirement Savings Calculator</h1>
-        <p class="lead">Based on age, salary, salary percent saved per year, and savings goal, this calculator will let a person know if they will meet their retirement savings goal.</p>
-    </div>
-    <div class="container text-center result">
-        <h3> {{message}} </h3>
-    </div>
-    <div class="container">
-        <form action="{{url_for('retirementpage')}}" method="POST">
-            <div class="card">
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="age" class="card-title">Age</label>
-                        <input type="text" class="form-control card-text" id="age" name="age" placeholder="ex. 23">
-                    </div>
-                    <div class="form-group">
-                        <label for="salary" class="card-title">Salary</label>
-                        <input type="text" class="form-control card-text" id="salary" name="salary" placeholder="ex. 50000">
-                    </div>
-                    <div class="form-group">
-                        <label for="percentsaved" class="card-title">Percent Saved</label>
-                        <input type="text" class="form-control card-text" id="percentsaved" name="percentsaved" placeholder="ex. .3">
-                    </div>
-                    <div class="form-group">
-                        <label for="savingsgoal" class="card-title">Savings Goal</label>
-                        <input type="text" class="form-control card-text" id="savingsgoal" name="savingsgoal" placeholder="ex. 300000">
-                    </div>
-                    <p class="text-danger"> {{error}} </p>
-                    <button type="submit" class="btn btn-secondary card-link" name="submit">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
+    
 </body>
 </html>
