@@ -36,6 +36,20 @@ body{
     padding-top: 1.5%;
 }
 
+.port{
+    padding-top: 2%;
+    padding-left: 18%;
+    text-align: left;
+    color: white;
+
+}
+.irgif{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: auto;
+    width: 65%;
+    
+}
 .btn-light:hover{
     transition: transform 150ms;
     transform: translateY(-5px);
