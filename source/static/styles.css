@@ -27,7 +27,7 @@ body{
 
 .cover{
     padding-top: 10%;
-    font-size: 700;
+    size: 1500px;
     color: #fff;
     text-align: center;
 }
@@ -40,6 +40,7 @@ body{
     transition: transform 150ms;
     transform: translateY(-5px);
 }
+
 
 @media (max-width: 950px) {
     .card{
