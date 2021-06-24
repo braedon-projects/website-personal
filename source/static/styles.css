@@ -43,6 +43,15 @@ body{
     color: white;
 
 }
+
+.easter-egg{
+    padding-top: 2%;
+    padding-left: 18%;
+    text-align: left;
+    color: white;
+    scroll-behavior: smooth;
+}
+
 .irgif{
     padding-top: 5%;
     padding-bottom: 5%;
